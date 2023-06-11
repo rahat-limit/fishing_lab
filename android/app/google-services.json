@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "184421618342",
+    "project_id": "fishing-lab-project",
+    "storage_bucket": "fishing-lab-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:184421618342:android:d26d2169f2cf359b5b1a67",
+        "android_client_info": {
+          "package_name": "com.fishing.lab.exclusive.id"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "184421618342-i7pfi80lf3vs1jqols0bd4uab1o7taef.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-HI9rlxoC_wbMvbaIwToxVJCBi7Sfy-8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "184421618342-i7pfi80lf3vs1jqols0bd4uab1o7taef.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
