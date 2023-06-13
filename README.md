@@ -127,12 +127,22 @@ dev_dependencies:
     <image src='https://github.com/rahat-limit/fishing_lab-FLUTTER-APP/blob/main/git_assets/singin.png' width='200'/>
     <image src='https://github.com/rahat-limit/fishing_lab-FLUTTER-APP/blob/main/git_assets/signup.png' width='200'/>
     <image src='https://github.com/rahat-limit/fishing_lab-FLUTTER-APP/blob/main/git_assets/account_screen.png' width='200'/>
+    <image src='https://github.com/rahat-limit/fishing_lab-FLUTTER-APP/blob/main/git_assets/reset_password.png' width='200'/>
 </p>
 
 ## ✖️ Main and  Navigation Screen
 - By long press, set a point.
 <p align='center'>
     <image src='https://github.com/rahat-limit/fishing_lab-FLUTTER-APP/blob/main/git_assets/main_screen.png' width='200'/>
+    <image src='https://github.com/rahat-limit/fishing_lab-FLUTTER-APP/blob/main/git_assets/navigation.png' width='200'/>
+</p>
+
+## ✖️ Points Screen
+- By long press, move to Navigation Screen.
+- By double tap, delete Point.
+- By one tap, move to Main Screen.
+<p align='center'>
+    <image src='https://github.com/rahat-limit/fishing_lab-FLUTTER-APP/blob/main/git_assets/points_screen.png' width='200'/>
     <image src='https://github.com/rahat-limit/fishing_lab-FLUTTER-APP/blob/main/git_assets/navigation.png' width='200'/>
 </p>
 
