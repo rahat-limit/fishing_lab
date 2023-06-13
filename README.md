@@ -110,7 +110,7 @@ dev_dependencies:
 - Kazakh
 - English
 <p align='center'>
-    <image src='https://github.com/rahat-limit/notio/blob/master/git-repo-assets/Simulator%20Screen%20Shot%20-%20iPhone%2014%20Pro%20-%202023-05-18%20at%2016.56.19.png' width='200'/>
+    <image src='https://github.com/rahat-limit/fishing_lab-FLUTTER-APP/blob/main/git_assets/simulator_screenshot_7F2C7A34-35E4-4123-9DFA-D2CE5B8A102F.png' width='200'/>
 </p>
 
 ## ✖️ Splash Screens
