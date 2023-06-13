@@ -42,10 +42,12 @@ dependencies:
 
   sqflite: '2.2.8+3'
 
-  intl: ^0.17.0
+  intl: ^0.18.1
   cloud_firestore: '4.7.0'
 
   google_mobile_ads: ^3.0.0
+
+  flutter_locales: '3.0.1'
 
 dev_dependencies:
   flutter_test:
@@ -65,12 +67,13 @@ flutter:
 
   assets:
     - assets/images/
-  #   - images/a_dot_ham.jpeg
+    - assets/locales/
 
   fonts:
     - family: BNR
       fonts:
-        - asset: assets/fonts/BebasNeue-Regular.ttf
+        # - asset: assets/fonts/BebasNeue-Regular.ttf
+        - asset: assets/fonts/Oswald-Medium.ttf
     - family: DNM
       fonts:
         - asset: assets/fonts/DMMono-Medium.ttf

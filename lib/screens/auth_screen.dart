@@ -9,6 +9,7 @@ import 'package:fishing_lab/widgets/auth_widgets/auth_logo.dart';
 import 'package:fishing_lab/widgets/auth_widgets/full_width_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_locales/flutter_locales.dart';
 
 class AuthScreen extends StatefulWidget {
   static const route = '/auth-screen';
@@ -46,7 +47,7 @@ class _AuthScreenState extends State<AuthScreen> {
   Widget build(BuildContext context) {
     void showErrorMessage(String error) {
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-        content: Text(
+        content: LocaleText(
           error,
         ),
         duration: const Duration(milliseconds: 800),
@@ -58,7 +59,7 @@ class _AuthScreenState extends State<AuthScreen> {
 
     void showClueMessage(String error) {
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-        content: Text(
+        content: LocaleText(
           error,
         ),
         duration: const Duration(milliseconds: 800),
@@ -165,7 +166,7 @@ class _AuthScreenState extends State<AuthScreen> {
           height: 30,
         ),
         Center(
-          child: Text(
+          child: LocaleText(
             isSignIn ? 'Sign In' : 'Sign Up',
             style: const TextStyle(
                 fontFamily: 'MR',
@@ -212,7 +213,7 @@ class _AuthScreenState extends State<AuthScreen> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       TextButton(
-                        child: const Text(
+                        child: const LocaleText(
                           'forgot password?',
                           style: TextStyle(color: CupertinoColors.link),
                         ),
@@ -267,14 +268,14 @@ class _AuthScreenState extends State<AuthScreen> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Text(
+                const LocaleText(
                   'Not a member, ',
                   style: TextStyle(
                       color: mainColor,
                       fontSize: 15,
                       fontWeight: FontWeight.w400),
                 ),
-                Text(
+                LocaleText(
                   isSignIn ? 'Register here' : 'Login here',
                   style: const TextStyle(
                       color: CupertinoColors.link, fontSize: 15),

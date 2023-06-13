@@ -22,12 +22,12 @@ class IntroFirst extends StatelessWidget {
             const SizedBox(
               height: 10,
             ),
-            const Headline(text: 'map and navigation'),
+            const Headline(text: 'map_and_navigation'),
             const SizedBox(
               height: 20,
             ),
             const SubText(
-              text: 'Look for new places and share with others',
+              text: 'map_and_navigation_description',
             ),
             const SizedBox(
               height: 45,

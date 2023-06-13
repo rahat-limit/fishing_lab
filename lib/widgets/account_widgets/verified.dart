@@ -1,5 +1,6 @@
 import 'package:fishing_lab/constants/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_locales/flutter_locales.dart';
 
 class VerifiedEmail extends StatelessWidget {
   const VerifiedEmail({super.key});
@@ -16,7 +17,7 @@ class VerifiedEmail extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Flexible(
-              child: Text('Your Email is Verified!',
+              child: LocaleText('Your Email is Verified!',
                   style: TextStyle(
                     color: mainColor,
                     fontSize: 16,

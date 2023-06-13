@@ -1,5 +1,6 @@
 import 'package:fishing_lab/constants/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_locales/flutter_locales.dart';
 
 class Reminder extends StatelessWidget {
   final String text;
@@ -34,7 +35,7 @@ class Reminder extends StatelessWidget {
                         height: 25,
                       ),
                       const SizedBox(width: 15),
-                      Text(
+                      LocaleText(
                         additional,
                         style: const TextStyle(
                             fontSize: 16,
@@ -63,15 +64,25 @@ class Reminder extends StatelessWidget {
                   height: 25,
                 ),
                 const SizedBox(width: 15),
-                Text(
-                  text,
-                  style: const TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                      fontFamily: 'DNM',
-                      color: mainColor,
-                      letterSpacing: -0.5),
-                )
+                position
+                    ? LocaleText(
+                        text,
+                        style: const TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: 'DNM',
+                            color: mainColor,
+                            letterSpacing: -0.5),
+                      )
+                    : Text(
+                        text,
+                        style: const TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: 'DNM',
+                            color: mainColor,
+                            letterSpacing: -0.5),
+                      )
               ]),
             ),
           ],

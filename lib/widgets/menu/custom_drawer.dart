@@ -8,6 +8,7 @@ import 'package:fishing_lab/screens/tips_screen.dart';
 import 'package:fishing_lab/widgets/menu/drawer_item.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_locales/flutter_locales.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
@@ -26,10 +27,11 @@ class CustomDrawer extends StatelessWidget {
               color: scaffoldColor,
               alignment: Alignment.bottomLeft,
               padding: const EdgeInsets.only(left: 25, bottom: 20),
-              child: const Text(
+              child: const LocaleText(
                 'fishing lab',
+                upperCase: true,
                 style: TextStyle(
-                    fontSize: 34, fontFamily: 'BNR', color: mainColor),
+                    fontSize: 26, fontFamily: 'BNR', color: mainColor),
               ),
             ),
             const SizedBox(
@@ -56,7 +58,7 @@ class CustomDrawer extends StatelessWidget {
               page: PointsScreen.route,
             ),
             const DrawerItem(
-              title: 'Catch Log',
+              title: 'Catch Log Another',
               icon: CupertinoIcons.bookmark,
               page: LogScreen.route,
             ),

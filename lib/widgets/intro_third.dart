@@ -25,13 +25,12 @@ class IntroThird extends StatelessWidget {
             const SizedBox(
               height: 10,
             ),
-            const Headline(text: 'Catch log'),
+            const Headline(text: 'catch_log'),
             const SizedBox(
               height: 20,
             ),
             const SubText(
-              text:
-                  'Record catches, fish species, size, location, time and other',
+              text: 'catch_log_description',
             ),
             const SizedBox(
               height: 45,

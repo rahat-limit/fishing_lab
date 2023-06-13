@@ -33,9 +33,9 @@ class _NewPlaceScreenState extends State<NewPlaceScreen> {
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: AppBar().preferredSize,
-        child: const CustomAppBar(
+        child: CustomAppBar(
           title: 'New Point',
-          actionButtons: [],
+          actionButtons: const [],
         ),
       ),
       body: SafeArea(

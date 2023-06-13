@@ -1,5 +1,6 @@
 import 'package:fishing_lab/constants/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_locales/flutter_locales.dart';
 
 class AccountButton extends StatelessWidget {
   final String text;
@@ -31,7 +32,7 @@ class AccountButton extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Flexible(
-                  child: Text(text,
+                  child: LocaleText(text,
                       style: const TextStyle(
                         color: mainColor,
                         fontSize: 16,

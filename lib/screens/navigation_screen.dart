@@ -94,9 +94,9 @@ class _NavigationScreenState extends State<NavigationScreen> {
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: AppBar().preferredSize,
-        child: const CustomAppBar(
+        child: CustomAppBar(
           title: 'navigation',
-          actionButtons: [],
+          actionButtons: const [],
         ),
       ),
       floatingActionButton: FloatingActionButton(

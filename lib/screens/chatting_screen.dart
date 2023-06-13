@@ -67,6 +67,7 @@ class _ChattingScreenState extends State<ChattingScreen> {
         child: CustomAppBar(
           title: widget.toUser.name,
           actionButtons: const [],
+          isChat: false,
         ),
       ),
       body: SafeArea(

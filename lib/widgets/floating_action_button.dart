@@ -1,5 +1,6 @@
 import 'package:fishing_lab/constants/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_locales/flutter_locales.dart';
 
 class ActionButton extends StatelessWidget {
   final String text;
@@ -36,7 +37,7 @@ class ActionButton extends StatelessWidget {
               const SizedBox(
                 width: 10,
               ),
-              Text(
+              LocaleText(
                 text,
                 style: const TextStyle(
                     fontSize: 16,

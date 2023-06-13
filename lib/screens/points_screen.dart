@@ -10,6 +10,7 @@ import 'package:fishing_lab/widgets/point_widgets/point_item.dart';
 import 'package:fishing_lab/widgets/search.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_locales/flutter_locales.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:provider/provider.dart';
@@ -97,19 +98,20 @@ class _PointsScreenState extends State<PointsScreen> {
           context: context,
           builder: (context) {
             return CupertinoAlertDialog(
-              title: const Text('Are you sure you want to delete this point?'),
+              title: const LocaleText(
+                  'Are you sure you want to delete this point?'),
               actions: <Widget>[
                 TextButton(
                     onPressed: () {
                       Navigator.pop(context);
                     },
-                    child: const Text('Close')),
+                    child: const LocaleText('Close')),
                 TextButton(
                   onPressed: () {
                     location_controller!.removePoint(id);
                     Navigator.pop(context);
                   },
-                  child: const Text(
+                  child: const LocaleText(
                     'Delete',
                     style: TextStyle(color: Colors.red),
                   ),

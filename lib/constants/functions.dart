@@ -1,5 +1,6 @@
 import 'package:fishing_lab/constants/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_locales/flutter_locales.dart';
 
 SnackBar snackBar(
     String label, String content, VoidCallback callback, Color color) {
@@ -64,7 +65,7 @@ Future<void> defineDetail({
             style: TextButton.styleFrom(
               textStyle: Theme.of(context).textTheme.labelLarge,
             ),
-            child: const Text('Back'),
+            child: const LocaleText('Back'),
             onPressed: () {
               mController.clear();
               cmController.clear();
@@ -75,7 +76,7 @@ Future<void> defineDetail({
             style: TextButton.styleFrom(
               textStyle: Theme.of(context).textTheme.labelLarge,
             ),
-            child: const Text('Set'),
+            child: const LocaleText('Set'),
             onPressed: () {
               Navigator.of(context).pop();
             },

@@ -1,5 +1,6 @@
 import 'package:fishing_lab/constants/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_locales/flutter_locales.dart';
 
 class LogInput extends StatelessWidget {
   final String text;
@@ -21,7 +22,7 @@ class LogInput extends StatelessWidget {
         maxLines: multilines ? 5 : 1,
         style: const TextStyle(color: mainColor),
         decoration: InputDecoration(
-          label: Text(
+          label: LocaleText(
             text,
             style: const TextStyle(fontSize: 19, color: mainColor),
           ),

@@ -1,6 +1,7 @@
 import 'package:fishing_lab/constants/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_locales/flutter_locales.dart';
 
 class Description extends StatelessWidget {
   final String text;
@@ -13,11 +14,11 @@ class Description extends StatelessWidget {
       margin: const EdgeInsets.symmetric(horizontal: 30),
       padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 15),
       child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-        Text(
+        LocaleText(
           text,
           style: const TextStyle(
               color: mainColor,
-              fontSize: 28,
+              fontSize: 24,
               fontFamily: 'BNR',
               letterSpacing: 1),
         ),

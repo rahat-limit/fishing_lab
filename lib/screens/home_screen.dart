@@ -73,9 +73,9 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: AppBar().preferredSize,
-        child: const CustomAppBar(
+        child: CustomAppBar(
           title: 'map and navigation',
-          actionButtons: [],
+          actionButtons: const [],
         ),
       ),
       body: Column(

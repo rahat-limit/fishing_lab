@@ -1,5 +1,6 @@
 import 'package:fishing_lab/constants/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_locales/flutter_locales.dart';
 
 class LogDetail extends StatelessWidget {
   final String text;
@@ -24,7 +25,7 @@ class LogDetail extends StatelessWidget {
           color: mainColor,
           size: 24,
         ),
-        label: Text(
+        label: LocaleText(
           text,
           style: const TextStyle(color: mainColor, fontSize: 16),
         ));

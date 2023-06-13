@@ -64,9 +64,9 @@ class _LogScreenState extends State<LogScreen> {
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: AppBar().preferredSize,
-        child: const CustomAppBar(
+        child: CustomAppBar(
           title: 'Catch Log',
-          actionButtons: [],
+          actionButtons: const [],
         ),
       ),
       floatingActionButton: ActionButton(

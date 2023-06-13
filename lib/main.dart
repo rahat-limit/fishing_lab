@@ -7,6 +7,7 @@ import 'package:fishing_lab/provider/tip_provider.dart';
 import 'package:fishing_lab/screen_router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_locales/flutter_locales.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:provider/provider.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -20,6 +21,7 @@ Future main() async {
   );
   await AppTrackingTransparency.requestTrackingAuthorization();
   await MobileAds.instance.initialize();
+  await Locales.init(['en', 'ru', 'kk']);
   runApp(MultiProvider(providers: [
     Provider<SplashProvider>(
       create: (_) => SplashProvider(),
@@ -38,5 +40,3 @@ Future main() async {
     ),
   ], child: const ScreenRouter()));
 }
-// test id
-// ca-app-pub-3940256099942544/4411468910

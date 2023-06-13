@@ -1,6 +1,7 @@
 import 'package:fishing_lab/constants/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_locales/flutter_locales.dart';
 
 class InfoItem extends StatelessWidget {
   final String text;
@@ -19,7 +20,7 @@ class InfoItem extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text(
+          LocaleText(
             placeholder,
             style: const TextStyle(
                 fontSize: 15, color: CupertinoColors.systemGreen),

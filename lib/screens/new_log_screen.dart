@@ -9,6 +9,7 @@ import 'package:fishing_lab/widgets/log_widgets/log_fish.dart';
 import 'package:fishing_lab/widgets/log_widgets/log_input.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_locales/flutter_locales.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
 
@@ -80,9 +81,9 @@ class _NewLogScreenState extends State<NewLogScreen> {
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: AppBar().preferredSize,
-        child: const CustomAppBar(
+        child: CustomAppBar(
           title: 'New Note',
-          actionButtons: [],
+          actionButtons: const [],
         ),
       ),
       body: SingleChildScrollView(
@@ -119,7 +120,7 @@ class _NewLogScreenState extends State<NewLogScreen> {
                         size: 30,
                         color: mainColor,
                       ),
-                      label: const Text(
+                      label: const LocaleText(
                         'Picture',
                         style: TextStyle(
                             color: mainColor,
@@ -143,7 +144,7 @@ class _NewLogScreenState extends State<NewLogScreen> {
                             ),
                           )
                         : const Center(
-                            child: Text(
+                            child: LocaleText(
                               'No Picture',
                               style: TextStyle(color: mainColor, fontSize: 18),
                             ),
@@ -160,7 +161,7 @@ class _NewLogScreenState extends State<NewLogScreen> {
                     const Row(
                       children: [
                         Flexible(
-                          child: Text(
+                          child: LocaleText(
                             'Describe Catch',
                             style: TextStyle(
                                 fontSize: 26,

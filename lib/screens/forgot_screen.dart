@@ -4,6 +4,7 @@ import 'package:fishing_lab/widgets/auth_widgets/auth_input.dart';
 import 'package:fishing_lab/widgets/auth_widgets/auth_logo.dart';
 import 'package:fishing_lab/widgets/auth_widgets/full_width_button.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_locales/flutter_locales.dart';
 
 class ForgotScreen extends StatefulWidget {
   static const route = '/reset-screen';
@@ -86,7 +87,7 @@ class _ForgotScreenState extends State<ForgotScreen> {
                       height: 40,
                     ),
                     const Center(
-                      child: Text(
+                      child: LocaleText(
                         'Reset Password',
                         style: TextStyle(
                             fontFamily: 'PlayFair',

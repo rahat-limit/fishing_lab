@@ -13,6 +13,7 @@ import 'package:fishing_lab/screens/splash_screen.dart';
 import 'package:fishing_lab/screens/tips_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_locales/flutter_locales.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:provider/provider.dart';
 
@@ -38,34 +39,39 @@ class _ScreenRouterState extends State<ScreenRouter> {
   Widget build(BuildContext context) {
     final List<Widget> screens = [const ScreenDivider(), const SplashScreen()];
 
-    return MaterialApp(
-      theme: ThemeData(
-          scaffoldBackgroundColor: scaffoldColor,
-          appBarTheme: const AppBarTheme(
-            systemOverlayStyle: SystemUiOverlayStyle(
-              statusBarIconBrightness: Brightness.dark,
-              statusBarBrightness: Brightness.light,
-            ),
-          )),
-      debugShowCheckedModeBanner: false,
-      home: Observer(
-        builder: (context) {
-          final index = splash_controller!.checked;
-          return screens[index];
+    return LocaleBuilder(builder: (locale) {
+      return MaterialApp(
+        localizationsDelegates: Locales.delegates,
+        supportedLocales: Locales.supportedLocales,
+        locale: locale,
+        theme: ThemeData(
+            scaffoldBackgroundColor: scaffoldColor,
+            appBarTheme: const AppBarTheme(
+              systemOverlayStyle: SystemUiOverlayStyle(
+                statusBarIconBrightness: Brightness.dark,
+                statusBarBrightness: Brightness.light,
+              ),
+            )),
+        debugShowCheckedModeBanner: false,
+        home: Observer(
+          builder: (context) {
+            final index = splash_controller!.checked;
+            return screens[index];
+          },
+        ),
+        routes: {
+          HomeScreen.route: (context) => const HomeScreen(),
+          ChatScreen.route: (context) => const ChatScreen(),
+          LogScreen.route: (context) => const LogScreen(),
+          SplashScreen.route: (context) => const SplashScreen(),
+          TipsScreen.route: (context) => const TipsScreen(),
+          AuthScreen.route: (context) => const AuthScreen(),
+          ForgotScreen.route: (context) => const ForgotScreen(),
+          AccountScreen.route: (context) => const AccountScreen(),
+          PointsScreen.route: (context) => const PointsScreen(),
+          NewLogScreen.route: (context) => const NewLogScreen(),
         },
-      ),
-      routes: {
-        HomeScreen.route: (context) => const HomeScreen(),
-        ChatScreen.route: (context) => const ChatScreen(),
-        LogScreen.route: (context) => const LogScreen(),
-        SplashScreen.route: (context) => const SplashScreen(),
-        TipsScreen.route: (context) => const TipsScreen(),
-        AuthScreen.route: (context) => const AuthScreen(),
-        ForgotScreen.route: (context) => const ForgotScreen(),
-        AccountScreen.route: (context) => const AccountScreen(),
-        PointsScreen.route: (context) => const PointsScreen(),
-        NewLogScreen.route: (context) => const NewLogScreen(),
-      },
-    );
+      );
+    });
   }
 }

@@ -1,5 +1,6 @@
 import 'package:fishing_lab/constants/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_locales/flutter_locales.dart';
 
 class AuthInput extends StatelessWidget {
   final TextEditingController controller;
@@ -32,8 +33,10 @@ class AuthInput extends StatelessWidget {
           borderSide: BorderSide(color: lightScaffoldColor, width: 1),
           borderRadius: BorderRadius.all(Radius.circular(9)),
         ),
-        hintText: text,
-        hintStyle: const TextStyle(fontSize: 19, color: lightMainColor),
+        label: LocaleText(
+          text,
+          style: const TextStyle(fontSize: 19, color: lightMainColor),
+        ),
         contentPadding:
             const EdgeInsets.symmetric(vertical: 19, horizontal: 15),
       ),

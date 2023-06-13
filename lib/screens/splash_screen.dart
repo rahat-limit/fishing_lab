@@ -2,6 +2,7 @@ import 'package:fishing_lab/constants/colors.dart';
 import 'package:fishing_lab/widgets/intro_first.dart';
 import 'package:fishing_lab/widgets/intro_second.dart';
 import 'package:fishing_lab/widgets/intro_third.dart';
+import 'package:fishing_lab/widgets/local_intro.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -19,6 +20,9 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     final List<Widget> tabBarContentPages = [
+      LocalIntro(
+        controller: controller,
+      ),
       IntroFirst(
         controller: controller,
       ),

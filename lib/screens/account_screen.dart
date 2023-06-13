@@ -11,6 +11,23 @@ import 'package:fishing_lab/widgets/appbar.dart';
 import 'package:fishing_lab/widgets/menu/custom_drawer.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_locales/flutter_locales.dart';
+
+class MenuItems {
+  static List<MenuItem> items = [ruItem, enItem, kkItem];
+  static MenuItem ruItem =
+      MenuItem(text: 'ru', path: 'assets/images/russia.png');
+  static MenuItem enItem =
+      MenuItem(text: 'en', path: 'assets/images/united-kingdom.png');
+  static MenuItem kkItem =
+      MenuItem(text: 'kk', path: 'assets/images/kazakhstan.png');
+}
+
+class MenuItem {
+  String text;
+  String path;
+  MenuItem({required this.text, required this.path});
+}
 
 class AccountScreen extends StatefulWidget {
   static const route = '/account';
@@ -89,6 +106,23 @@ class _AccountScreenState extends State<AccountScreen> {
 
   @override
   Widget build(BuildContext context) {
+    PopupMenuItem<MenuItems> buildMethod(MenuItem item) => PopupMenuItem(
+        onTap: () {
+          Locales.change(context, item.text);
+        },
+        child: Row(
+          children: [
+            Image(
+              image: AssetImage(item.path),
+              width: 35,
+            ),
+            const SizedBox(width: 8),
+            Text(
+              item.text.toUpperCase(),
+              style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w400),
+            )
+          ],
+        ));
     return StreamBuilder<User?>(
         stream: FirebaseAuth.instance.authStateChanges(),
         builder: (context, snapshot) {
@@ -96,9 +130,20 @@ class _AccountScreenState extends State<AccountScreen> {
             return Scaffold(
               appBar: PreferredSize(
                 preferredSize: AppBar().preferredSize,
-                child: const CustomAppBar(
+                child: CustomAppBar(
                   title: 'Account',
-                  actionButtons: [],
+                  actionButtons: [
+                    PopupMenuButton<MenuItems>(
+                        icon: const Icon(
+                          Icons.language,
+                          size: 25,
+                        ),
+                        itemBuilder: (context) =>
+                            [...MenuItems.items.map(buildMethod).toList()]),
+                    const SizedBox(
+                      width: 20,
+                    )
+                  ],
                 ),
               ),
               body: SingleChildScrollView(
@@ -175,14 +220,14 @@ class _AccountScreenState extends State<AccountScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  const Text('You are not registered'),
+                  const LocaleText('You are not registered'),
                   const SizedBox(
                     height: 10,
                   ),
                   ElevatedButton(
                       onPressed: () => Navigator.pushReplacementNamed(
                           context, AuthScreen.route),
-                      child: const Text('Register'))
+                      child: const LocaleText('Register'))
                 ],
               ),
             );

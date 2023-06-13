@@ -1,5 +1,6 @@
 import 'package:fishing_lab/constants/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_locales/flutter_locales.dart';
 
 class FullWithButton extends StatelessWidget {
   final String text;
@@ -24,7 +25,7 @@ class FullWithButton extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(vertical: 18.0),
                   backgroundColor: tipBackgroundColor),
               onPressed: callback,
-              child: Text(
+              child: LocaleText(
                 text,
                 style: const TextStyle(
                     fontSize: 19,

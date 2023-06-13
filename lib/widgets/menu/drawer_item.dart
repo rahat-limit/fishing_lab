@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_locales/flutter_locales.dart';
 
 class DrawerItem extends StatelessWidget {
   final String title;
@@ -20,7 +21,7 @@ class DrawerItem extends StatelessWidget {
         children: [
           ListTile(
               minLeadingWidth: 30,
-              title: Text(
+              title: LocaleText(
                 title,
                 style: const TextStyle(
                   fontSize: 16,

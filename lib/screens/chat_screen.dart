@@ -8,6 +8,7 @@ import 'package:fishing_lab/widgets/chat_widgets/chat_item.dart';
 import 'package:fishing_lab/widgets/menu/custom_drawer.dart';
 import 'package:fishing_lab/widgets/search.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_locales/flutter_locales.dart';
 
 class ChatScreen extends StatefulWidget {
   static const route = '/chat';
@@ -48,9 +49,10 @@ class _ChatScreenState extends State<ChatScreen> {
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: AppBar().preferredSize,
-        child: const CustomAppBar(
+        child: CustomAppBar(
           title: 'Chat',
-          actionButtons: [],
+          actionButtons: const [],
+          isChat: true,
         ),
       ),
       body: Column(children: [
@@ -59,7 +61,12 @@ class _ChatScreenState extends State<ChatScreen> {
           callback: (String text) {
             setState(() {});
           },
-          placeholder: 'Enter an Email',
+          // ignore: unrelated_type_equality_checks
+          placeholder: context.currentLocale.toString().trim() == 'en'
+              ? 'Enter an Email'
+              : (context.currentLocale.toString().trim() == 'ru'
+                  ? "Введите почту"
+                  : 'Поштаны енгізіңіз'),
         ),
         Expanded(
             child: Padding(
@@ -101,7 +108,7 @@ class _ChatScreenState extends State<ChatScreen> {
                       ),
                       Padding(
                         padding: EdgeInsets.symmetric(horizontal: 20.0),
-                        child: Text(
+                        child: LocaleText(
                           'Oops, no people found!',
                           textAlign: TextAlign.center,
                           style: TextStyle(fontSize: 23, color: mainColor),

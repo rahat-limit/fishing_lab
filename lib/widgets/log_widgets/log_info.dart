@@ -1,6 +1,7 @@
 import 'package:fishing_lab/constants/colors.dart';
 import 'package:fishing_lab/models/log_model.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_locales/flutter_locales.dart';
 
 class LogInfo extends StatelessWidget {
   final LogModel log;
@@ -97,7 +98,7 @@ class LogInfo extends StatelessWidget {
                                   border:
                                       Border.all(width: 1, color: mainColor),
                                 ),
-                                child: const Text('Fish Name',
+                                child: const LocaleText('Fish Name',
                                     style: TextStyle(color: mainColor)),
                               ),
                               const SizedBox(width: 10),
@@ -131,7 +132,7 @@ class LogInfo extends StatelessWidget {
                                   border:
                                       Border.all(width: 1, color: mainColor),
                                 ),
-                                child: const Text('Fish Long',
+                                child: const LocaleText('Fish Long',
                                     style: TextStyle(color: mainColor)),
                               ),
                               const SizedBox(width: 10),
@@ -165,7 +166,7 @@ class LogInfo extends StatelessWidget {
                                   border:
                                       Border.all(width: 1, color: mainColor),
                                 ),
-                                child: const Text(
+                                child: const LocaleText(
                                   'Fish Weight',
                                   style: TextStyle(color: mainColor),
                                 ),

@@ -29,9 +29,9 @@ class _TipsScreenState extends State<TipsScreen> {
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: AppBar().preferredSize,
-        child: const CustomAppBar(
+        child: CustomAppBar(
           title: 'Tips',
-          actionButtons: [],
+          actionButtons: const [],
         ),
       ),
       body: Padding(
